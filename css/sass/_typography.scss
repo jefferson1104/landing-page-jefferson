@@ -1,0 +1,155 @@
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Barlow Condensed", sans-serif;
+  color: $white-normal;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  padding: 8px 24px;
+  font-size: 24px;
+
+  display: inline-block;
+
+  transition: 0.5s ease;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 0%;
+    height: 2px;
+
+    transform: translate(20%, -50%);
+    transition: 0.5s ease;
+
+    background-color: $white-normal;
+  }
+
+  &:hover {
+    opacity: 0.8;
+
+    &::after {
+      width: 70%;
+    }
+  }
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 110%;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 120%;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 130%;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.mask {
+  background: linear-gradient(225deg, #2dc7ed 0%, #538bf0 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.square {
+  display: inline-block;
+  margin-top: 64px;
+
+  font-size: 24px;
+
+  padding: 16px 24px;
+
+  position: relative;
+
+  letter-spacing: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    transform: translate(-30%, 0%) rotate(0deg);
+
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(225deg, #2dc7ed 0%, rgba(83, 139, 240, 0) 100%);
+
+    border-radius: 4px;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    filter: brightness(0.7);
+    &::after {
+      transform: translate(-15%, 0%) rotate(0deg);
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
