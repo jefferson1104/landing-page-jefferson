@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: 0,
       ease: "power3.out",
     }, "-=0.8")
+    .from(".menu-7", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out",
+    }, "-=0.8")
     .from(".container-item div", {
       duration: 1,
       y: 300,
@@ -51,6 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
       y: 300,
       opacity: 0,
       stagger: {each: 0.2},
+      ease: "power3.out",
+    }, "-=0.8")
+    .from(".technology div", {
+      duration: 2,
+      y: 600,
+      opacity: 0,
+      stagger: {each: 0.8},
       ease: "power3.out",
     }, "-=0.8")
     .from(".about div", {
