@@ -59,22 +59,31 @@ document.addEventListener('DOMContentLoaded', () => {
       stagger: {each: 0.2},
       ease: "power3.out",
     }, "-=0.8")
-    .from(".technology div", {
-      duration: 2,
-      y: 600,
-      opacity: 0,
-      stagger: {each: 0.8},
-      ease: "power3.out",
-    }, "-=0.8")
-    .from(".about div", {
-      duration: 2,
-      y: 600,
-      opacity: 0,
-      stagger: {each: 0.8},
-      ease: "power3.out",
-    }, "-=0.8")
 
   gsap.registerPlugin(ScrollTrigger);
+  
+
+  gsap.from("#main-technologies div", {
+    duration: 1,
+    y: 500,
+    opacity: 0,
+    stagger: {each: 0.5},
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#main-technologies",
+    }
+  });
+
+  gsap.from("#about div", {
+    duration: 1,
+    y: 500,
+    opacity: 0,
+    stagger: {each: 0.5},
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#about",
+    }
+  });
 
   gsap.from("#section-works div", {
     duration: 1,
